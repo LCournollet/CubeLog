@@ -25,7 +25,8 @@ thiserror = "1"
 
 [profile.release]
 panic = "abort"
-codegen-units = 1
-lto = true
-opt-level = "s"
+# opt-level 1 et pas de LTO : optimisation correcte sans faire exploser la
+# mémoire de rustc/LLVM (le crate `windows` provoque un OOM aux niveaux élevés).
+opt-level = 1
+lto = false
 strip = true
