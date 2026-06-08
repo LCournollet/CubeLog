@@ -1,0 +1,36 @@
+# Dépendances
+node_modules
+dist
+dist-ssr
+
+# Rust / Tauri
+src-tauri/target
+src-tauri/gen
+
+# Config cargo locale (chemin target spécifique à la machine — voir README)
+.cargo/
+
+# Dumps de diagnostic audio
+*.f32
+
+# Logs & divers
+*.log
+.DS_Store
+*.local
+.env
+.env.*
+!.env.example
+
+# Éditeurs
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Bases locales générées en dev
+*.sqlite
+*.sqlite-journal
+*.db
